@@ -20,5 +20,16 @@ app.get('/prueba', (req, res) =>{
         console.log(err);
     }
 })
+
+app.post('/suma', (req, res) =>{
+    try{
+        const data = req.body.value;
+        const suma = eval(data);
+        res.json(suma);
+    }
+    catch(err){ 
+        console.log(err);
+    }
+})
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
