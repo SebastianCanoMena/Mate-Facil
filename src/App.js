@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import Navbar from './components/Navbar';
 import Body from './components/Body'
-import Get from './procesos/get'
+import Get from './processes/get'
 
 function App() {
   return (
