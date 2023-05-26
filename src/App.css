@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #68B684; 
+  background-color: #1F7A8C; 
   color: #FFFFFF; 
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -12,7 +12,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #B07560;
+  background-color: #FFAC14;
   height: 50px;
 }
 
@@ -22,9 +22,19 @@ body{
   justify-content: center;
 }
 
-.Navbar-temario{
-  margin-left: 10px;
-  margin-right: 80px;
+.Navbar-user{
+  height: 40px;
+  width: auto;
+}
+
+.Navbar-github{
+  height: 40px;
+  width: auto;
+}
+
+.Navbar-logo{
+  height: 40px;
+  width: auto;
 }
 
 /*Body Background*/
@@ -54,7 +64,7 @@ body{
   flex-direction: column;
   width: 700px;
   max-height: 100%;
-  background-color: darkblue;
+  background-color: #00008b;
   border-radius: 5%;
   transform: translateY(-40%);
   position: relative;

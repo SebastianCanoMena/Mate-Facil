@@ -1,16 +1,16 @@
 import React from 'react'
-import Arrow from '../images/nav/Arrow.png'
 import Logo from '../images/nav/Logo.png'
 import User from '../images/nav/User.png'
+import Github from '../images/nav/Github.png'
 
 export default function Navbar(){
     return(
         <div className='Navbar'>
-            <img alt='' src={Logo} />
+            <img alt='' className='Navbar-logo' src={Logo} />
             <div className='Navbar-center'>
-            
+            <img alt='' className='Navbar-github' src={Github}/>
             </div>
-            <img alt='' src={User}/>
+            <img alt='' className='Navbar-user' src={User}/>
         </div>
     )
 }
