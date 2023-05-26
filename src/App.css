@@ -22,9 +22,6 @@ body{
   justify-content: center;
 }
 
-.Navbar-arrow{
-  margin-left: 80px;
-}
 .Navbar-temario{
   margin-left: 10px;
   margin-right: 80px;
@@ -45,42 +42,44 @@ body{
 /*Body*/
 .Body-center{
   display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-direction: column;
-
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
 }
+
 .Body-center2{
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  width: 700px;
+  max-height: 100%;
+  background-color: darkblue;
+  border-radius: 5%;
+  transform: translateY(-40%);
+  position: relative;
 }
 
 .Body-title{
   font-weight: 900;
   font-size: 60px;
-  position: relative;
-  top: 50px;
+  bottom: 100px;
 }
+
 .Body-irregularForm{
-  position: relative;
-  top: 10px;
+  height: 100%;
+  
 }
 .Body-searchIcon{
-  position: relative;
-  bottom: 130px;
-  right: 170px;
+  position: absolute;
 }
 .Body-searchBar{ 
   background-color: transparent;
-  position: relative;
   height: 30px;
-  bottom: 175px;
-  width: 280px;
+  width: 300px;
   font-size:20px;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  border-radius: 5px;
   border-bottom-color: black;
+  position: absolute;
+  bottom: 100px;
 }

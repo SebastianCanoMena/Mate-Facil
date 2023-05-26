@@ -8,12 +8,14 @@ export default function Navbar(){
         <div className='Navbar'>
             <img alt='' src={Logo} />
             <div className='Navbar-center'>
-            <img alt='' src={Arrow} className='Navbar-arrow'/>
-            <h2 className='Navbar-temario'>Temarios ENP</h2>
-            <img alt='' src={Arrow} className='Navbar-arrow'/>
-            <h2 className='Navbar-temario'>Temarios SEP</h2>
+            
             </div>
             <img alt='' src={User}/>
         </div>
     )
 }
+
+/*<img alt='' src={Arrow} className='Navbar-arrow'/>
+            <h2 className='Navbar-temario'>Temarios ENP</h2>
+            <img alt='' src={Arrow} className='Navbar-arrow'/>
+            <h2 className='Navbar-temario'>Temarios SEP</h2>*/
