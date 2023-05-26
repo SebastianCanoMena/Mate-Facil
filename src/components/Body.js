@@ -2,7 +2,7 @@ import React from 'react'
 import Back1 from '../images/background/Back1.png'
 import Back2 from '../images/background/Back2.png'
 import Body2 from '../images/body/Body2.png'
-import Body3 from '../images/body/Body3.png'
+
 import { useState } from 'react'
 
 
@@ -33,7 +33,6 @@ export default function Body(){
             <div className='Body-center2'>
                 <h1 className='Body-title'>Mate Facil</h1>
                 <img alt='' src={Body2} className='Body-irregularForm'/>
-                <img alt='' src={Body3} className='Body-searchIcon'/>
                 <input type='text' value={value} onChange={userValue}onKeyPress={operation} className='Body-searchBar'/>
             </div>
         </div>

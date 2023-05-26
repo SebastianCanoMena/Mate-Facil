@@ -70,9 +70,7 @@ body{
   height: 100%;
   
 }
-.Body-searchIcon{
-  position: absolute;
-}
+
 .Body-searchBar{ 
   background-color: transparent;
   height: 30px;
