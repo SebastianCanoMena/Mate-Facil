@@ -3,6 +3,7 @@ import Back1 from '../images/background/Back1.png'
 import Back2 from '../images/background/Back2.png'
 import Body2 from '../images/body/Body2.png' 
 import Tema from './Body/Tema'
+import Result from './Body/Result'
 
 import { useState } from 'react'
 
@@ -10,10 +11,12 @@ import { useState } from 'react'
 export default function Body(){
     const[value, setValue] = useState(''); 
 
+    const[result, setResult] = useState(false);
 
     const userValue = (event) => 
     {
         setValue(event.target.value);
+        setResult(true);
     }
 
     const operation = (event) => {
@@ -38,6 +41,7 @@ export default function Body(){
                 <input type='text' value={value} onChange={userValue}onKeyPress={operation} className='Body-searchBar'/>
             </div>
         </div>
+        {result ? <Result /> : null}
     </div>
     )
 }

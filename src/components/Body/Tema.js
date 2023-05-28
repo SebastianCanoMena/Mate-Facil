@@ -4,7 +4,7 @@ export default function Tema() {
     return (
         <div>
 <div className="dropdown">
-  <button className="Tema-button">Elige el tema</button>
+  <button className="Tema-button">Elije el tema</button>
   <div className="dropdown-content">
     <a href="#">Algebra</a>
     <div className="Tema-dropdown-algebra">

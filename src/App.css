@@ -94,14 +94,22 @@ body{
 
 /*Body-topic selector*/
 
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  bottom: 100px;
+  left: 38px;
+}
+
 .Tema-button {
   background-color: #1F7A8C;
   color: #FFFFFF;
-  width: 300px;
-  padding: 10px;
+  width: 160px;
+  padding: 6px;
   font-size: 20px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Estilos para el contenedor del menú desplegable */
@@ -162,4 +170,34 @@ body{
   display: block;
   top: 0;
   left: 100%;
+}
+
+
+/*Result*/
+
+.Result {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.Result-background{
+  background-color: #00008b;
+  width: 700px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 5%;
+  flex-direction: column;
+}
+
+.Result-container{
+  background-color: #FFFFFF;
+  width: 400px;
+  height: fit-content;
+  padding: 5px;
+  color: #00008b;
+  margin-top: 100px;
+  border-radius: 5%;
 }
