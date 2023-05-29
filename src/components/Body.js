@@ -11,18 +11,20 @@ import { useState } from 'react'
 export default function Body(){
     const[value, setValue] = useState(''); 
 
-    const[result, setResult] = useState(false);
+    const[display, setDisplay] = useState(false);
+
+    const [result, setResult] = useState(null);
 
     const userValue = (event) => 
     {
         setValue(event.target.value);
-        setResult(true);
+        setDisplay(true);
     }
 
     const operation = (event) => {
         if(event.key === 'Enter')
         {
-            Post(value);
+            Post(value, setResult);
         }
     }
 
@@ -41,16 +43,14 @@ export default function Body(){
                 <input type='text' value={value} onChange={userValue}onKeyPress={operation} className='Body-searchBar'/>
             </div>
         </div>
-        {result ? <Result /> : null}
+        {display ? <Result Result={result}/> : null}
     </div>
     )
 }
 
 
-function Post(value)
-{
-
-    fetch('http://localhost:5000/suma', {
+function Post(value, setResult){
+    fetch('http://localhost:5000/algebra', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ function Post(value)
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            setResult(data)
         })
         .catch(err => {
             console.log(err);

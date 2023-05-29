@@ -21,11 +21,11 @@ app.get('/prueba', (req, res) =>{
     }
 })
 
-app.post('/suma', (req, res) =>{
+app.post('/algebra', (req, res) =>{
     try{
         const data = req.body.value;
-        const suma = eval(data);
-        res.json(suma);
+        const components = data.match(/[-+]?[^-+]+/g);
+        res.json(components);
     }
     catch(err){ 
         console.log(err);
