@@ -11,7 +11,7 @@ import { useState } from 'react'
 export default function Body(){
     const[value, setValue] = useState(''); 
 
-    const[display, setDisplay] = useState(false);
+    const[display, setDisplay] = useState(true);
 
     const [result, setResult] = useState(null);
 
@@ -30,23 +30,25 @@ export default function Body(){
 
     return (
     <div className='Body'>
-        <div className='Background'>
-            <img alt='' src={Back1} className='Body-back1'/>
-            <img alt='' src={Back2} className='Body-back2'/>
-        </div>
         
          <div className='Body-center'>
             <div className='Body-center2'>
                 <h1 className='Body-title'>Mate Facil</h1>
                 <Tema />
-                <img alt='' src={Body2} className='Body-irregularForm'/>
+                <div className='Body-irregularForm'>
                 <input type='text' value={value} onChange={userValue}onKeyPress={operation} className='Body-searchBar'/>
+                </div>
             </div>
         </div>
-        {display ? <Result Result={result}/> : null}
+        {display ? <Result Result={result}/> : null} 
     </div>
     )
 }
+/*        <div className='Background'>
+            <img alt='' src={Back1} className='Body-back1'/>
+            <img alt='' src={Back2} className='Body-back2'/>
+        </div>
+*/
 
 
 function Post(value, setResult){

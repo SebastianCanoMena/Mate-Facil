@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #1F7A8C; 
+  background-color: #98eeff;
   color: #FFFFFF; 
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -12,7 +12,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #FFAC14;
+  background-color: #fda5f3;
+  border: 2px solid #000000; /* Establece el grosor y el color del borde */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   height: 50px;
 }
 
@@ -54,7 +56,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  position: relative;
+  top: 200px;
 }
 
 .Body-center2{
@@ -63,8 +66,7 @@ body{
   align-items: center;
   flex-direction: column;
   width: 700px;
-  max-height: 100%;
-  background-color: #00008b;
+  background: linear-gradient(to bottom, #00008b 0%, #D138BF 100%);
   border-radius: 5%;
   transform: translateY(-40%);
   position: relative;
@@ -77,8 +79,13 @@ body{
 }
 
 .Body-irregularForm{
-  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 5px;
   
+  width: 650px;
+  height: 200px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .Body-searchBar{ 
@@ -90,6 +97,7 @@ body{
   border-bottom-color: black;
   position: absolute;
   bottom: 100px;
+  left: 200px;
 }
 
 /*Body-topic selector*/
@@ -102,8 +110,8 @@ body{
 }
 
 .Tema-button {
-  background-color: #1F7A8C;
-  color: #FFFFFF;
+  background: linear-gradient(to bottom, #FFAC14 0%, #FEFFFE 100%);
+  color: #000000;
   width: 160px;
   padding: 6px;
   font-size: 20px;
@@ -179,25 +187,25 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  margin-top: 100px;
 }
 
 .Result-background{
-  background-color: #00008b;
+  background: linear-gradient(to bottom, #00008b 0%, #D138BF 100%);
   width: 700px;
-  height: fit-content;
+  min-height: fit-content;
   display: flex;
   align-items: center;
   border-radius: 5%;
   flex-direction: column;
+  
 }
 
 .Result-container{
   background-color: #FFFFFF;
   width: 400px;
-  height: fit-content;
   padding: 5px;
   color: #00008b;
-  margin-top: 100px;
+  margin: 100px;
   border-radius: 5%;
 }
