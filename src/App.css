@@ -79,11 +79,11 @@ body{
 }
 
 .Body-irregularForm{
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .2); 
   border-radius: 5px;
   
   width: 650px;
-  height: 200px;
+  height: 100px;
   margin-bottom: 50px;
   margin-top: 20px;
 }
@@ -95,6 +95,7 @@ body{
   font-size:20px;
   border-radius: 5px;
   border-bottom-color: black;
+  background-color: #FFFFFF;
   position: absolute;
   bottom: 100px;
   left: 200px;
@@ -110,7 +111,7 @@ body{
 }
 
 .Tema-button {
-  background: linear-gradient(to bottom, #FFAC14 0%, #FEFFFE 100%);
+  background-color: #fda5f3;
   color: #000000;
   width: 160px;
   padding: 6px;
