@@ -1,16 +1,20 @@
 import React from 'react'
 import './App.css';
-import Navbar from './components/Navbar';
+import Layout from './components/Layout';
 import Body from './components/Body'
 import Get from './processes/get'
+import Login from './components/Login'
+import { Route, Routes } from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Body />
-      <Get />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Layout>
   );
 }
 

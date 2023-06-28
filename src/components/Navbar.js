@@ -2,20 +2,16 @@ import React from 'react'
 import Logo from '../images/nav/Logo.png'
 import User from '../images/nav/User.png'
 import Github from '../images/nav/Github.png'
+import { Link } from 'react-router-dom'
 
 export default function Navbar(){
     return(
         <div className='Navbar'>
-            <img alt='' className='Navbar-logo' src={Logo} />
+            <Link to='/' ><img alt='' className='Navbar-logo' src={Logo} /></Link>
             <div className='Navbar-center'>
-            <img alt='' className='Navbar-github' src={Github}/>
+            <Link to='https://github.com/SebastianCanoMena/Mate-Facil' ><img alt='' className='Navbar-github' src={Github}/></Link>
             </div>
-            <img alt='' className='Navbar-user' src={User}/>
+            <Link to='/login' ><img alt='' className='Navbar-user' src={User}/></Link>
         </div>
     )
 }
-
-/*<img alt='' src={Arrow} className='Navbar-arrow'/>
-            <h2 className='Navbar-temario'>Temarios ENP</h2>
-            <img alt='' src={Arrow} className='Navbar-arrow'/>
-            <h2 className='Navbar-temario'>Temarios SEP</h2>*/
