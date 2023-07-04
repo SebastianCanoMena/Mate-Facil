@@ -14,7 +14,7 @@ export default function Tema() {
     <a href="#">Cuadraticas</a>
     <a href="#">Radicales</a>
     <a href="#">Rationales</a>
-    <a href="#">Systema</a>
+    <a href="#">Sistema</a>
     </div>
     </div>
 
