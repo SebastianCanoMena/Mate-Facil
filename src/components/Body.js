@@ -1,19 +1,18 @@
 import React from 'react'
-import Back1 from '../images/background/Back1.png'
-import Back2 from '../images/background/Back2.png'
-import Body2 from '../images/body/Body2.png' 
-import Tema from './Body/Tema'
+import { Tema, topic } from './Body/Tema'
 import Result from './Body/Result'
+import { useState} from 'react'
 
-import { useState } from 'react'
 
+export default function Body(){  
 
-export default function Body(){
     const[value, setValue] = useState(''); 
 
     const[display, setDisplay] = useState(true);
 
     const [result, setResult] = useState(null);
+
+    const [procedure, setProcedure] = useState(null);
 
     const userValue = (event) => 
     {
@@ -24,7 +23,7 @@ export default function Body(){
     const operation = (event) => {
         if(event.key === 'Enter')
         {
-            Post(value, setResult);
+            Post(value, setResult, setProcedure);
         }
     }
 
@@ -40,7 +39,7 @@ export default function Body(){
                 </div>
             </div>
         </div>
-        {display ? <Result Result={result}/> : null} 
+        {display ? <Result Result={result} Procedure={procedure}/> : null} 
     </div>
     )
 }
@@ -50,9 +49,11 @@ export default function Body(){
         </div>
 */
 
+console.log(topic);
 
-function Post(value, setResult){
-    fetch('http://localhost:5000/algebra', {
+function Post(value, setResult, setProcedure){
+
+    fetch(`http://localhost:5000/algebra/equations/${topic}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -61,7 +62,8 @@ function Post(value, setResult){
     })
         .then(res => res.json())
         .then(data => {
-            setResult(data)
+            setResult(data.result)
+            setProcedure(data.procedimiento)
         })
         .catch(err => {
             console.log(err);

@@ -1,6 +1,6 @@
 //a+bx=c
 
-function Linear(ecuacion) {
+    const Linear = (ecuacion) => {
     let  match = ecuacion.replace(/\s/g, '')
     
     match = match.match(/^(\-?\d+)?([+\-]\d+)?x=([+\-]?\d+)$/) 
@@ -20,28 +20,48 @@ function Linear(ecuacion) {
         const result = constante / (coeficiente1);
 
         //procedimiento de la ecuacion bx = c
-        console.log(`${ecuacion}
-        \n Dividir los dos lados entre ${coeficiente1} 
-        \n ${coeficiente1}x/${coeficiente1} = ${constante}/${coeficiente1}
-        \n x = ${result}`)
-        return result;
+        const procedimiento = `${ecuacion}
+        <hr/><br/>
+        Dividir los dos lados entre ${coeficiente1} 
+        <br/><br/>
+        ${coeficiente1}x/${coeficiente1} = ${constante}/${coeficiente1}
+        <hr/><br/>
+        x = ${result}
+        <hr/>`
+        
+        return {
+            result: result,
+            procedimiento: procedimiento
+        };
     }
 
     const resultPaso1 = (constante - (coeficiente1)) 
     
     const result = resultPaso1 / (coeficiente2);
 
-    console.log(`${ecuacion}
-    \n Pasar el coeficiente ${coeficiente1} de x al otro lado de la ecuación
-    \n x = ${constante}${-1*coeficiente1}
-    \n x = ${resultPaso1}
-    \n Dividir los dos lados entre ${coeficiente2} 
-    \n x/${coeficiente2} = ${resultPaso1}/${coeficiente2}
-    \n x = ${result}`)
+    const procedimiento = `${ecuacion}
+        <hr/><br/>
+        Pasar el coeficiente ${coeficiente1} de x al otro lado de la ecuación
+        <br/><br/>
+        x = ${constante}${-1*coeficiente1}
+        <br/><br/>
+        x = ${resultPaso1}
+        <hr/><br/>
+        Dividir los dos lados entre ${coeficiente2} 
+        <br/><br/>
+        x/${coeficiente2} = ${resultPaso1}/${coeficiente2}
+        <hr/><br/>
+        x = ${result}
+        <hr/>`
 
-    return result;
+    return {
+        result: result,
+        procedimiento: procedimiento
+    };
 
 }
+
+module.exports = Linear;
 
 //console.log(Linear('4 +4x = 8'));
 
@@ -49,6 +69,6 @@ function Linear(ecuacion) {
 
 //console.log(Linear('3 -3x = 9'));
 
-console.log(Linear('20 + 3x = 0'));
+//console.log(Linear('20 + 3x = 0'));
 
 //console.log(Linear('-3x = 9'));
