@@ -1,10 +1,12 @@
-import React from 'react'
-import { Tema, topic } from './Body/Tema'
+import React, { useEffect } from 'react'
+import { Tema } from './Body/Tema'
 import Result from './Body/Result'
 import { useState} from 'react'
 
 
 export default function Body(){  
+
+    const [topicChoice, setTopicChoice] = useState("linear");
 
     const[value, setValue] = useState(''); 
 
@@ -23,9 +25,13 @@ export default function Body(){
     const operation = (event) => {
         if(event.key === 'Enter')
         {
-            Post(value, setResult, setProcedure);
+            Post(value, topicChoice, setResult, setProcedure);
         }
     }
+
+    useEffect(() => {
+        console.log(topicChoice);
+    }, [topicChoice])
 
     return (
     <div className='Body'>
@@ -33,7 +39,7 @@ export default function Body(){
          <div className='Body-center'>
             <div className='Body-center2'>
                 <h1 className='Body-title'>Mate Facil</h1>
-                <Tema />
+                <Tema  setTopic={setTopicChoice} />
                 <div className='Body-irregularForm'>
                 <input type='text' value={value} onChange={userValue}onKeyPress={operation} className='Body-searchBar'/>
                 </div>
@@ -49,11 +55,10 @@ export default function Body(){
         </div>
 */
 
-console.log(topic);
 
-function Post(value, setResult, setProcedure){
+function Post(value, topicChoice, setResult, setProcedure){
 
-    fetch(`http://localhost:5000/algebra/equations/${topic}`, {
+    fetch(`http://localhost:5000/algebra/equations/${topicChoice}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

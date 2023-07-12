@@ -6,7 +6,7 @@ export default function Result({Result, Procedure}){
             <div className="Result-background">
                 <div className="Result-container">
                     <h4>Resultado</h4>
-                    <p>{Result}</p>
+                    <p> <div dangerouslySetInnerHTML={{__html: Result}}/></p>
                     </div>
                 <div className="Result-container">
                     <h4>Procedimiento</h4>

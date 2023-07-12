@@ -1,13 +1,5 @@
 import React from "react";
-import {useState, useEffect} from "react";
-  export let topic = "linear";
-export  function Tema() {
-    
-    const [topicChoice, setTopicChoice] = useState("linear");
-
-    useEffect(() => {
-        topic = topicChoice;
-    } , [topic]);
+export  function Tema({setTopic}) {
     
     return (
         <div>
@@ -18,11 +10,11 @@ export  function Tema() {
     <div className="Tema-dropdown-algebra">
     <a href="#">Ecuaciones</a>
     <div className="Tema-dropdown-ecuaciones">
-    <a href="#" onClick={() =>  setTopicChoice("linear")}>Lineales</a>
-    <a href="#" onClick={() =>  setTopicChoice("quadratic")}>Cuadraticas</a>
-    <a href="#" onClick={() =>  setTopicChoice("radical")}>Radicales</a>
-    <a href="#" onClick={() =>  setTopicChoice("rational")}>Rationales</a>
-    <a href="#" onClick={() =>  setTopicChoice("systems")}>Sistema</a>
+    <a href="#" onClick={() =>  setTopic("linear")}>Lineales</a>
+    <a href="#" onClick={() =>  setTopic("quadratic")}>Cuadraticas</a>
+    <a href="#" onClick={() =>  setTopic("radical")}>Radicales</a>
+    <a href="#" onClick={() =>  setTopic("rational")}>Rationales</a>
+    <a href="#" onClick={() =>  setTopic("systems")}>Sistema</a>
     </div>
     </div>
 
